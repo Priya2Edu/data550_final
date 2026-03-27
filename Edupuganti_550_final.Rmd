@@ -1,0 +1,57 @@
+---
+title: "Data 550 Final Project"
+author: "Priya Edupuganti"
+date: "`r Sys.Date()`"
+output: 
+  html_document:
+    toc: yes
+    toc_float:
+      collapsed: true
+---
+```{r, here-i-am, include=FALSE}
+here::i_am(
+  "Edupuganti_550_final.Rmd"
+)
+```
+
+```{r Chunk options, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
+```
+
+## Introduction
+
+### Goal
+The goal of the current report is to illustrate descriptive statistic values associated with CTG Measurements, identify critical risk factors through linear regression modeling, and cross validate the results.
+
+### Data
+The dataset in use focuses on fetal health, containing cardiotocogram (CTG) measurements and assessing the health of 2126 fetuses. The data identifies a total of 21 different measurement variables that CTGs can provide. There's an additional ordinal variable, identifying fetuses' health status as "Normal", "Suspect", and "Pathological."
+
+If a clear association between fetus health and a few of the measurements can be identified and trained to a model, CTGs' effectiveness in reducing child mortality rates can increase, and access to high-level practioners is not required to determine fetal health.
+
+Source: Ayres de Campos et al. (2000) SisPorto 2.0 A Program for Automated Analysis of Cardiotocograms. J Matern Fetal Med 5:311-318. https://www.kaggle.com/datasets/andrewmvd/fetal-health-classification.
+
+```{r, Loading Outputs}
+Table <- readRDS(
+  here::here("output/table.rds")
+)
+
+Plot <- readRDS(
+  here::here("output/scatterplot.rds")
+)
+```
+
+## Descriptive Statistics
+
+### Summary Table of Critical Measurements
+```{r, Table 1}
+Table
+```
+
+The table above displays average Heart Rate, Fetal Movement, Uterine Contractions, and Abnormal Short-Term CTG Variability by fetal health status. Standard Deviations are located in parantheses next to each respective average, and the number of observations per status is noted as well.
+
+### Relationship between Heart Rate and Movement
+```{r, HR_Movement_Scatter}
+Plot
+```
+
+The figure above displays fetal heart rate against fetal movements per second with points colored by health status. Clusters for Pathological and/or Suspect measurements can suggest possible relationships between fetal activity and health status.
