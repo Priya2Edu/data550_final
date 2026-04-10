@@ -21,12 +21,12 @@ knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
 ## Introduction
 
 ### Goal
-The goal of the current report is to illustrate descriptive statistic values associated with CTG Measurements, identify critical risk factors through linear regression modeling, and cross validate the results.
+The goal of the current report is to illustrate descriptive statistic values associated with CTG Measurements and identify pathological clusters in order to identify key indicators.
 
 ### Data
 The dataset in use focuses on fetal health, containing cardiotocogram (CTG) measurements and assessing the health of 2126 fetuses. The data identifies a total of 21 different measurement variables that CTGs can provide. There's an additional ordinal variable, identifying fetuses' health status as "Normal", "Suspect", and "Pathological."
 
-If a clear association between fetus health and a few of the measurements can be identified and trained to a model, CTGs' effectiveness in reducing child mortality rates can increase, and access to high-level practioners is not required to determine fetal health.
+If a pattern between fetus health and a few of the measurements can be identified, subsequent modeling can proceed. This allows CTGs' effectiveness in reducing child mortality rates to increase, and access to high-level practioners is not required to determine fetal health.
 
 Source: Ayres de Campos et al. (2000) SisPorto 2.0 A Program for Automated Analysis of Cardiotocograms. J Matern Fetal Med 5:311-318. https://www.kaggle.com/datasets/andrewmvd/fetal-health-classification.
 

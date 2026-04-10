@@ -12,3 +12,8 @@ output/table.rds: code/01_table_output.R
 .PHONY: clean
 clean:
 	rm -f output/*.rds && rm -f Edupuganti_550_final.html
+
+.PHONY: install
+install:
+	Rscript -e "renv::restore(prompt = FALSE)"
+	
