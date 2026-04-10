@@ -28,3 +28,6 @@ key indicators.
 'Makefile'
 
   - contains rules for building the report and cleaning project directory
+      - Use the `Make Install` command in terminal to install project packages
+      - Use the `Make` command to produce the final report
+      - Use the `Make Clean` command to remove outputs and the final report
