@@ -1,3 +1,13 @@
+## Cardiotocogram Analysis
+
+The current repository generates a report, compiling Cardiotocogram data into
+a descriptive table, as well as a scatterplot of fetal heart rate against 
+movement.
+
+The goal of the report is to illustrate descriptive statistic values associated 
+with CTG Measurements and identify pathological clusters in order to identify 
+key indicators.
+
 ## Initial Code Description
 
 'code/01_table_output.R'
